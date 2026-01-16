@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="hero">
+<h1>POZNATOR AI IMAGE LAB</h1>
+<p>Бесплатный Sci‑Fi генератор изображений: киберпанк, техно-антиутопия, AI‑контроль</p>
+<a href="#terminal" class="hero-btn">Открыть терминал</a>
+</div>
+
+<div class="features">
+<div class="feature-card"><div class="feature-icon">🚀</div><h3>Бесплатно</h3><p>Без ключей</p></div>
+<div class="feature-card"><div class="feature-icon">🎨</div><h3>Модели</h3><p>GPT, Gemini, SD3, Flux</p></div>
+<div class="feature-card"><div class="feature-icon">📐</div><h3>Форматы</h3><p>1:1, 9:16, 16:9</p></div>
+<div class="feature-card"><div class="feature-icon">💾</div><h3>VAULT</h3><p>Локальный архив</p></div>
+</div>
+
+<div class="terminal-wrapper" id="terminal">
+<div class="container">
+<div class="inner-content">
+
+<div class="header">
+<div class="brand"><h2>POZNATOR</h2><div class="subtitle">AI IMAGE LAB</div></div>
+<div class="sys-right">
+<div class="social-links">
+<a href="https://www.youtube.com/@POZNATOR" target="_blank" class="social-btn">► YT</a>
+<a href="https://t.me/Poznator_bot" target="_blank" class="social-btn">✈ TG</a>
+</div>
+</div>
+</div>
+
+<div class="tabs">
+<button class="tab-btn active" onclick="switchTab('art')">VISUAL</button>
+<button class="tab-btn" onclick="switchTab('vault')">VAULT</button>
+</div>
+
+<div id="tab-art" class="tab-content active">
+<div class="row-3">
+<div class="input-group"><span class="input-label">:: МОДЕЛЬ</span>
+<select id="model-select">
+<option value="gpt-image-1.5">GPT IMAGE 1.5</option>
+<option value="nano-banana-pro">NANO BANANA PRO</option>
+<option value="sd3-medium">SD3 MEDIUM</option>
+<option value="flux-1-pro">FLUX 1 PRO</option>
+</select>
+</div>
+<div class="input-group"><span class="input-label">:: КАЧЕСТВО</span>
+<select id="quality-select">
+<option value="high">HIGH</option>
+<option value="medium">MEDIUM</option>
+<option value="low">LOW</option>
+</select>
+</div>
+<div class="input-group"><span class="input-label">:: ФОРМАТ</span>
+<select id="ratio-select">
+<option value="1:1">1:1</option>
+<option value="9:16">9:16</option>
+<option value="16:9">16:9</option>
+</select>
+</div>
+</div>
+
+<div class="input-group">
+<span class="input-label">:: ПРОМПТ</span>
+<textarea id="prompt-input" rows="3" placeholder="Опиши сцену..."></textarea>
+<button id="promptGeneratorBtn">ГЕНЕРИРОВАТЬ SCI-FI ПРОМПТ</button>
+</div>
+
+<button class="action-btn" id="btn-gen" onclick="generateImage()">ЗАПУСТИТЬ РЕНДЕР</button>
+
+<div id="image-container"><div style="padding:20px;color:#9ca3af">Введи промпт и нажми ЗАПУСТИТЬ РЕНДЕР</div></div>
+<div class="status-line" id="status-line"></div>
+
+<div style="margin-top:20px;border-top:1px solid #1e293b;padding-top:10px">
+<span class="input-label">:: ПОСЛЕДНИЕ КАДРЫ</span>
+<div class="vault-grid" id="mini-vault"></div>
+</div>
+</div>
+
+<div id="tab-vault" class="tab-content">
+<span class="input-label" style="text-align:center">:: АРХИВ КАДРОВ</span>
+<div class="vault-grid" id="full-vault"></div>
+<button class="action-btn" style="margin-top:20px;border-color:#f97316;color:#f97316" onclick="clearVault()">ОЧИСТИТЬ</button>
+</div>
+
+</div>
+</div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
